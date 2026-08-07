@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa de Radios</title>
+    <title>Mapa de Envíos</title>
 
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
@@ -15,7 +15,62 @@
 
 <body>
 
-    <div id="map"></div>
+    <div class="contenedor-principal">
+
+        <!-- Cabecera -->
+        <header class="cabecera">
+            <img src="assets/d1dd8611-d035-4f7f-a965-d505e2a66ec6-removebg-preview.webp" alt="Logo" class="logo">
+        </header>
+
+        <!-- Contenedor del mapa -->
+        <div class="contenedor-mapa">
+
+            <div id="map"></div>
+
+            <!-- Leyenda -->
+            <div class="leyenda">
+
+                <h3>Precio de Envíos</h3>
+
+                <div class="item">
+                    <span class="color verde"></span>
+                    <span class="colorTextKm">
+                        Hasta 1 km — <strong>$70</strong>
+                    </span>
+                </div>
+
+                <div class="item">
+                    <span class="color amarillo"></span>
+                    <span class="colorTextKm">
+                        Hasta 2 km — <strong>$90</strong>
+                    </span>
+                </div>
+
+                <div class="item">
+                    <span class="color naranja"></span>
+                    <span class="colorTextKm">
+                        Hasta 3 km — <strong>$110</strong>
+                    </span>
+                </div>
+
+                <div class="item">
+                    <span class="color rojo"></span>
+                    <span class="colorTextKm">
+                        Hasta 4 km — <strong>$130</strong>
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <footer>
+            <div>
+                <p> &copy Sergi Burgers todos los derechos reservados</p>
+            </div>
+        </footer>
+
+    </div>
 
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
