@@ -28,11 +28,24 @@ L.marker(centro, {
     .bindPopup("<b>Centro del mapa</b><br>-34.83129799562688, -56.17469889591736")
     .openPopup()
 
+    
+// ===============================
+// RADIO 0.5 KM (VERDE)
+// ===============================
+
+const radio1 = L.circle(centro, {
+    radius: 500,
+    color: "#07ca00",
+    weight: 2,
+    fillColor: "#00ff668c",
+    fillOpacity: 0.30
+}).addTo(map)
+
 // ===============================
 // RADIO 1 KM (VERDE)
 // ===============================
 
-const radio1 = L.circle(centro, {
+L.circle(centro, {
     radius: 1000,
     color: "#00A651",
     weight: 2,
@@ -69,12 +82,13 @@ L.circle(centro, {
 // ===============================
 
 L.circle(centro, {
-    radius: 4000,
+    radius: 5000,
     color: "#E53935",
     weight: 2,
     fillColor: "#FF5252",
     fillOpacity: 0.14
 }).addTo(map)
+
 
 // Ajustar el zoom para que se vea completo el radio de 3 km
 map.fitBounds(radio1.getBounds().pad(2))
